@@ -46,11 +46,11 @@
 
 ### Power BI Дашборд
 *(Добавь сюда файл dashboard_preview.png в папку dashboards и раскомментируй строку ниже)*
-<!-- ![Sales Dashboard](dashboards/dashboard_preview.png) -->
+![Sales Dashboard](dashboards/dashboard_preview.png)
 
 ### Telegram-бот
 *(Добавь сюда скриншот ответа от бота bot_preview.png и раскомментируй строку ниже)*
-<!-- ![Bot Report](bot/bot_preview.png) -->
+![Bot Report](bot/bot_preview.png)
 
 ## ⚙️ Как запустить проект локально
 
