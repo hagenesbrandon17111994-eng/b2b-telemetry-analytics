@@ -27,6 +27,7 @@
 
 ## 📁 Структура репозитория
 
+```text
 ├── data/
 │   ├── raw_data_generator.py      # Скрипт генерации синтетических данных продаж
 │   └── etl_pipeline.ipynb         # Ноутбук с процессом нормализации и загрузки в БД
@@ -39,7 +40,7 @@
 │   └── dashboard_preview.png      # Скриншот дашборда для превью
 ├── README.md                      # Описание проекта
 └── b2b_telemetry.db               # (Игнорируется в .gitignore) Локальная БД
-
+```
 
 ## 📸 Демонстрация работы
 
@@ -54,5 +55,23 @@
 ## ⚙️ Как запустить проект локально
 
 1. **Клонируйте репозиторий:**
-   ```bash
-   git clone [https://github.com/ВАШ_НИК/b2b-telemetry-analytics.git](https://github.com/ВАШ_НИК/b2b-telemetry-analytics.git)
+```bash
+git clone https://github.com/ВАШ_НИК/b2b-telemetry-analytics.git
+```
+
+2. **Установите зависимости Python:**
+```bash
+pip install pandas numpy aiogram nest_asyncio
+```
+
+3. **Сгенерируйте данные и базу данных:**
+   * Запустите скрипт `raw_data_generator.py` для создания CSV-файла.
+   * Выполните ячейки в `etl_pipeline.ipynb`, чтобы создать `b2b_telemetry.db`.
+
+4. **Запустите бота:**
+   * Вставьте свой Telegram API токен в файл `main_bot.py` (вместо 'YOUR_TOKEN_HERE').
+   * Выполните `python bot/main_bot.py`.
+
+5. **Просмотр дашборда:**
+   * Установите драйвер [SQLite ODBC](http://www.ch-werner.de/sqliteodbc/).
+   * Откройте файл `sales_dashboard.pbix` в Power BI Desktop и обновите источники данных.
